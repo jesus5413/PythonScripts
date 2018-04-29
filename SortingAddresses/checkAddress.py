@@ -12,7 +12,7 @@ import difflib
 #   returns a dictionary that contains a parsed address
 #
 # Purpose
-#   - To parse an address in appropriate sections 
+#   - To parse an address in appropriate sections
 def parseAddress(info, counter):
     mainAddress = {'StreetNum': "",
                    'StreetType': "",
@@ -72,7 +72,17 @@ def parseAddress(info, counter):
 
     return mainAddress;
 
-
+# addressSyntaxException
+#
+# Parameters
+#   info - A dictionary filled with address info
+#
+#
+# returns
+#   returns a dictionary that contains a parsed address
+#
+# Purpose
+#   - To raise Exception errors and as well decide which dictionaries to throw out
 def addressSyntaxException(info):
     address = info['StreetNum']
     adrNum = address[0]
@@ -103,6 +113,17 @@ def addressSyntaxException(info):
     return info
 
 
+# streetType
+#
+# Parameters
+#   info - A dictionary filled with address info
+#
+#
+# returns
+#   returns a street type
+#
+# Purpose
+#   - To decide which street type the address has
 def streetType(info):
     #standard types of street acronyms
     strType = {          "avenue":
@@ -149,7 +170,17 @@ def streetType(info):
 
     return ""
 
-
+# getTtreetType
+#
+# Parameters
+#   info - A dictionary filled with address info
+#
+#
+# returns
+#   returns a street type and a popped list
+#
+# Purpose
+#   - To decide which street type the address has and to minimize the parsed address
 def getStreetType(parsedAddress):
 
     realStrType = ""
@@ -162,6 +193,17 @@ def getStreetType(parsedAddress):
 
     return parsedAddress, realStrType
 
+# direction
+#
+# Parameters
+#   info - A dictionary filled with address info
+#
+#
+# returns
+#   returns a direction type
+#
+# Purpose
+#   - To decide which direction the address has
 def direction(info):
 
     direction = {             "east":
@@ -194,6 +236,17 @@ def direction(info):
 
     return ""
 
+# getDirection
+#
+# Parameters
+#   info - A dictionary filled with address info
+#
+#
+# returns
+#   returns a direction type and a minimized parsed address
+#
+# Purpose
+#   - To decide which direction the address has
 def getDirection(parsedAddress):
     strDir = []
     tempPopList = []
@@ -225,6 +278,17 @@ def getDirection(parsedAddress):
     return parsedAddress, strString
 
 
+# getAptNumber
+#
+# Parameters
+#   info - A dictionary filled with address info
+#
+#
+# returns
+#   returns an apt number and a minimized parsed address
+#
+# Purpose
+#   - To check if it has an apt number and return that number
 def getAptNumber(parsedAddress):
 
     aptList = ["apartment", "apt", "nr", "#"]
@@ -260,7 +324,17 @@ def getAptNumber(parsedAddress):
     return parsedAddress, aptNmb
 
 
-
+# addressChecker
+#
+# Parameters
+#   info - A dictionary filled with address info
+#
+#
+# returns
+#   returns a direction type and a minimized parsed address for addresses that are less than 3
+#
+# Purpose
+#   - To decide which direction the address has
 def addressChecker(parsedAddress):
 
     strDir = []
@@ -301,7 +375,17 @@ def addressChecker(parsedAddress):
     return parsedAddress, strString
 
 
-
+# scoring
+#
+# Parameters
+#   info - A dictionary filled with address info
+#
+#
+# returns
+#
+#
+# Purpose
+#   - To score similarities between addresses and print out that information
 def scoring(infoList):
     print("%10s  %10s  %10s"%("Address", "Address","Score"))
     for key in infoList:

@@ -38,8 +38,8 @@
       <file leaf-file-name="checkAddress.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkAddress.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-728">
-              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+            <state relative-caret-position="222">
+              <caret line="387" column="76" selection-start-line="387" selection-start-column="76" selection-end-line="387" selection-end-column="76" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -272,8 +272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkAddress.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-728">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        <state relative-caret-position="222">
+          <caret line="387" column="76" selection-start-line="387" selection-start-column="76" selection-end-line="387" selection-end-column="76" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

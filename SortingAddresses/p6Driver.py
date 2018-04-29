@@ -61,7 +61,6 @@ while True:
 
     #  gets the customer name and removes the word customer from the line
     if inputLine.find("CUSTOMER") == 0 and inputLine.find("CUSTOMEREND") == -1:
-        # have a list to traverse and compare function
         if a is not None:
             bdr.scoring(a)
         a = []

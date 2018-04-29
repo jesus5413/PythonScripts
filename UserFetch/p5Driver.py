@@ -4,6 +4,44 @@ import sys
 import address as adr
 
 
+# Purpose:
+#   - Script get a file from the command line and outputs the name and the addresses associated with the name
+#
+#
+# Input:
+# CUSTOMER BOB WIRE
+# ADDRBEG
+# LINE 123 DIRT
+# LINE RD
+# CITY SAN ANTONIO
+# STATE TX
+# ZIP 78210
+# ADDREND
+# ADDRBEG
+# LINE 123 DIRT
+# CITY SAN ANTONIO
+# STATE TX
+# ZIP 78210
+# ADDREND
+# ADDRBEG
+# LINE 123 DIRT LN
+# CITY SAN ANTONIO
+# STATE TX
+# ZIP 78210
+# ADDREND
+# CUSTOMEREND
+#
+# Output:
+#  BOB WIRE
+# 1    123 DIRT RD
+#      SAN ANTONIO,  TX 78210
+#
+# 2    123 DIRT
+#      SAN ANTONIO,  TX 78210
+#
+# 3    123 DIRT LN
+#      SAN ANTONIO,  TX 78210
+
 if len(sys.argv) < 2:
     print("filename needed!")
     sys.exit()
